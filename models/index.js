@@ -35,8 +35,3 @@ db.Sequelize = Sequelize;
 
 module.exports = db;
 
-// Syncs with DB
-Book.sync();
-
-// Makes the Book Model available for other files (will also create a table)
-module.exports = Book;
