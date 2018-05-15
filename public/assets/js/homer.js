@@ -60,5 +60,5 @@ $(document).ready(function() {
 		)
 		//** do we need to clear the create profile form (is that needed?)
 	});
-
+//***********Quiz Functionality****************
 });
