@@ -12,10 +12,10 @@ $(document).ready(function() {
 	//button for creating new profile
 	$("#submit").on("click", function() {
 		//grabs user input //check burger and train example...
-		var newfirst = $(this).data("#newFirst").val().trim();
-		var newLast = $(this).data("#newLast").val().trim();
-		var newUser = $(this).data("#newUser").val().trim();
-		var newPass  = $(this).data("#newPass").val().trim();
+		var newfirst = $("#newFirst").val().trim();
+		var newLast = $("#newLast").val().trim();
+		var newUser = $("#newUser").val().trim();
+		var newPass  = $("#newPass").val().trim();
 		// creates local "temp" objest for new profile
 		var newProfile = {
 			first: newFirst,
@@ -24,8 +24,8 @@ $(document).ready(function() {
 			password: newPass
 		};
 		//send PUT request.
-		$.ajax("/api/homer/" + newUser, {
-			type: "PUT",
+		$.ajax("/homer/create", {
+			type: "POST",
 			data: newProfile
 		}).then(
 			function() {
@@ -51,16 +51,16 @@ $(document).ready(function() {
 	//button for logging in
 	$("#submit").on("click", function() {
 		//grabs user input //check burger and train example...
-		var newUser = $(this).data("#newUser").val().trim();
-		var newPass  = $(this).data("#newPass").val().trim();
+		var newUser = $("#newUser").val().trim();
+		var newPass  = $("#newPass").val().trim();
 		// creates local "temp" objest for new profile
 		var login = {
 			user: newUser,
 			password: newPass
 		};
 		//send PUT request.
-		$.ajax("/api/homer/" + login, {
-			type: "PUT",
+		$.ajax("/homer/login", {
+			type: "POST",
 			data: login
 		}).then(
 			function() {
@@ -69,6 +69,6 @@ $(document).ready(function() {
 			}
 		)
 		//** do we need to clear the create profile form (is that needed?)
+	});
 
 });
-
