@@ -2,13 +2,8 @@
 
 //***********New user Functionality****************
 $(document).ready(function() {
-		//buton to display new profile form
-	$("#create").on("click", function() {
-		//alert
-		alert("Start your journey with Homer");
-		//render new profile form
-	});
-
+	//buton to display new profile and login form (done through materialize)
+	$('.modal').modal();
 	//button for creating new profile
 	$("#submit").on("click", function() {
 		//grabs user input //check burger and train example...
@@ -42,12 +37,7 @@ $(document).ready(function() {
 	});
 
 //***********existing user Functionality****************
-	//button to display login form
-	$("#login").on("click", function() {
-		//alert
-		alert("Welcome back, continue your journey");
-		//render login form
-	});
+
 	//button for logging in
 	$("#submit").on("click", function() {
 		//grabs user input //check burger and train example...
@@ -70,5 +60,5 @@ $(document).ready(function() {
 		)
 		//** do we need to clear the create profile form (is that needed?)
 	});
-
+//***********Quiz Functionality****************
 });
