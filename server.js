@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+require("./routes/htmlRoutes.js")(app);
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
