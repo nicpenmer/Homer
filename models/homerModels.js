@@ -3,7 +3,7 @@
 // // sequelize (lowercase) references my connection to the DB.
 // var sequelize = require("../config/connection.js");
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
+  var Post = sequelize.define("Users", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
