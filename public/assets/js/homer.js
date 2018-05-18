@@ -2,15 +2,20 @@
 
 //***********New user Functionality****************
 $(document).ready(function() {
+
 	//buton to display new profile and login form (done through materialize)
 	$('.modal').modal();
+
 	//button for creating new profile
-	$("#submit").on("click", function() {
+	$("#submitNewProfile").on("click", function(event) {
+		event.preventDefault();
+
 		//grabs user input //check burger and train example...
-		var newfirst = $("#newFirst").val().trim();
+		var newFirst = $("#newFirst").val().trim();
 		var newLast = $("#newLast").val().trim();
 		var newUser = $("#newUser").val().trim();
 		var newPass  = $("#newPass").val().trim();
+
 		// creates local "temp" objest for new profile
 		var newProfile = {
 			first: newFirst,
@@ -18,7 +23,9 @@ $(document).ready(function() {
 			user: newUser,
 			password: newPass
 		};
-		//send PUT request.
+
+		console.log(newProfile);
+		//send POST request.
 		$.ajax("/homer/create", {
 			type: "POST",
 			data: newProfile
