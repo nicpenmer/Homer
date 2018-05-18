@@ -4,12 +4,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>HOMER | QUIZ</title>
+  <title>HOMER | RESULTS</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="public/assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="public/assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 </head>
@@ -22,7 +22,7 @@
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li>                    
+        <li>
           <a href="#"></a>
           <a href="login.html">Login</a>
           <a href="user.html">User Page</a>
@@ -47,8 +47,10 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="https://static1.squarespace.com/static/539f7bcfe4b0c1bc4482f192/t/550255ede4b0f0635463d34e/1424154168934/web_Alternative-img-%28high-res%29.jpg?format=1500w" alt="losAngeles"></div>
+    <div class="parallax"><img src="https://thumbs.dreamstime.com/z/nashville-music-city-downtown-neon-lights-along-row-tennessee-64161183.jpg" alt="nashville"></div>
+
   </div>
+
  
 
   <div class="container">
@@ -59,8 +61,11 @@
         <div class="col s12 m12">
           <br>
             <div class="row center">
-                <div class="Quiz">
-                        <a href="" id="createbutton" class="btn-large waves-effect waves-light grey darken-2" data-target="quizSubmit" class="btn modal-trigger">QUIZ</a>
+                <div class="results">
+                    <div class="resultsDisplay">
+                        <h4>Here are your top 20 results</h4>
+                        <ul id="resultList"></ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,40 +78,13 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Fill out the quiz: there are only 10 simple questions to find your soulmate city.</h5>
+          <h5 class="header col s12 light">Welcome Home</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="https://wallpapercave.com/wp/Vx6Ohz5.jpg" alt="Countryside"></div>
+    <div class="parallax"><img src="https://wallpapersmug.com/download/3840x2400/22b4b8/san-francisco-city-buildings-bridge-night.jpg" alt="sanFran"></div>
   </div>
   
-
-
-  <!-- Modal Structure -->
-  <div id="createNew" class="modal">
-    <div class="modal-content">
-      <h4>QUIZ</h4>
-      <div id="quizQuestions">
-        <ul>
-          <li id="q1">What kind life do you want: City or Suburbs?</li>
-          <li id="q2">Who do you live with: Are you Single or do you have a family?</li>
-          <li id="q3">Salary: How much do you make?</li>
-          <li id="q4">Industry: What do you do?</li>
-          <li id="q5">Do Schools Matter: Yes or No? </li>
-          <li id="q6">Is Snow a dealbreaker?</li>
-          <li id="q7">Night owl or Morning dove?</li>
-          <li id="q8">How much do you want to pay in Rent?</li>
-          <li id="q9">Is Traffic a dealbreaker?</li>
-          <li id="q10">Crimerates: Are you a Safety Sally or a Daredevil Denise?</li>
-        </ul>
-      </div>
-    </div>
-    <div class="modal-footer">
-        <a href="" id="submit" class="btn-large waves-effect waves-light grey darken-2" data-target="quizSubmit" class="btn modal-trigger">Submit</a>
-
-    </div>
-  </div>
-
 
 
 
@@ -121,8 +99,9 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="public/assets/js/materialize.js"></script>
-  <script src="public/assets/js/init.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/init.js"></script>
+  <script src="assets/js/homer.js"></script>
 
   </body>
 </html>

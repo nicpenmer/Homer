@@ -6,6 +6,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 // Requiring our models for syncing
 var db = require("./models/index");
+// var userTable = require("./db/seeds");
 
 // Sets up the Express App
 // =============================================================
@@ -18,20 +19,22 @@ app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
 // parse application/json
 app.use(bodyParser.json());
 
 
+
 // Set Handlebars.
 var exphbs = require("express-handlebars");
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Routes
 // ============s=================================================
 require("./controllers/homerController")(app);
+require("./routes/htmlRoutes.js")(app);
+
+// userTable.up(db.sequelize, db.Sequelize);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
