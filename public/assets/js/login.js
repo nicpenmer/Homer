@@ -10,11 +10,21 @@ $(document).ready(function() {
 	$("#submitNewProfile").on("click", function(event) {
 		event.preventDefault();
 
-		//grabs user input //check burger and train example...
+		//grabs user input 
 		var newFirst = $("#newFirst").val().trim();
 		var newLast = $("#newLast").val().trim();
 		var newUser = $("#newUser").val().trim();
 		var newPass  = $("#newPass").val().trim();
+
+		//need to loop thorugh the database to makesure the USER NAME is not taken
+		for (var i = 0; i < newUser.length; i++) {
+			if (newUser[i] === ("what ever is in the database")) {
+				console.log("user name taken")
+				// clear username field 
+			} else {
+				//push newProfile to the database
+			}
+		}
 
 		// creates local "temp" objest for new profile
 		var newProfile = {
@@ -26,7 +36,7 @@ $(document).ready(function() {
 
 		console.log(newProfile);
 		//send POST request.
-		$.ajax("/homer/create", {
+		$.ajax("/api/create", {
 			type: "POST",
 			data: newProfile
 		}).then(
@@ -35,12 +45,6 @@ $(document).ready(function() {
 				//*******do we need anything else????
 			}
 		)
-		//** do we need to clear the create profile form (is that needed?)
-
-		//Alert
-		alert("welcome to homer");
-
-		//render home profile page with stats for quiz
 	});
 
 //***********existing user Functionality****************
@@ -48,15 +52,27 @@ $(document).ready(function() {
 	//button for logging in
 	$("#submit").on("click", function() {
 		//grabs user input //check burger and train example...
-		var newUser = $("#newUser").val().trim();
-		var newPass  = $("#newPass").val().trim();
+		var user = $("#newUser").val().trim();
+		var password  = $("#newPass").val().trim();
 		// creates local "temp" objest for new profile
+
+		for (var i = 0; i < user.length; i++) {
+			//check database to see if it matches a username and password stored 
+			if (user[i] === ("whats in the database") && password[i] === ("whats in the database")) {
+				//find there file and render there profile
+			} else 
+			console.log("Either password or user name is wrong")
+			//clear fields 
+		}
+		//creating a temp object to hold login data
 		var login = {
-			user: newUser,
-			password: newPass
+			user: user,
+			password: password
 		};
+
+		console.log(login);
 		//send PUT request.
-		$.ajax("/homer/login", {
+		$.ajax("/api/login", {
 			type: "POST",
 			data: login
 		}).then(
@@ -67,5 +83,4 @@ $(document).ready(function() {
 		)
 		//** do we need to clear the create profile form (is that needed?)
 	});
-//***********Quiz Functionality****************
 });
