@@ -60,3 +60,6 @@ var Sequelize = require("sequelize");
  });
  
  }
+
+ findUserObj(1);
+ findCityObj(1); 
