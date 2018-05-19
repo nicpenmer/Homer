@@ -29,5 +29,6 @@
     "sequelize": "^4.37.7",
     "sqlite3": "^4.0.0",
     "validator": "^10.2.0"
-  }
+  },
+  "devDependencies": {}
 }
