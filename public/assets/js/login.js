@@ -17,10 +17,9 @@ $(document).ready(function() {
         var newPass = $("#newPass").val().trim();
 
         //need to check/read through the database to makesure the USER NAME is not taken
-        $ajax("/api/create" + newUser, {
+        $.ajax("/api/create" + newUser, {
             type: "GET",
-        }).then(
-            function(response) {
+        }).then(function(response) {
                 if (response === true) {
                     console.log("choose a new user name")
                 } else {
@@ -36,14 +35,11 @@ $(document).ready(function() {
                     $.ajax("/api/create", {
                         type: "POST",
                         data: newProfile
-                    }).then(
-                        function(data) {
-                            console.log("new user added", newProfile);
-                        };
-                    );
+                    }).then(function(data) {
+                        console.log("new user added", newProfile);
+                    });
                 };
-            };
-        );
+        });
     });
 
     //***********existing user Functionality****************
@@ -75,17 +71,17 @@ $(document).ready(function() {
             });
 
 
-        // console.log(login);
-        // //send PUT request.
-        // $.ajax("/api/login", {
-        //         type: "POST",
-        //         data: login
-        //     }).then(
-        //         function() {
-        //             console.log("You are logged in", login);
-        //             //*******do we need anything else????
-        //         }
-        //     )
-        //     //** do we need to clear the create profile form (is that needed?)
+    //     console.log(login);
+    //     //send PUT request.
+    //     $.ajax("/api/login", {
+    //             type: "POST",
+    //             data: login
+    //         }).then(
+    //             function() {
+    //                 console.log("You are logged in", login);
+    //                 //*******do we need anything else????
+    //             }
+    //         )
+    //         //** do we need to clear the create profile form (is that needed?)
     });
 });
