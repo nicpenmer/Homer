@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Kevin2015#",
-    "database": "homer",
-    "host": "127.0.0.1",
+    "username": "b0a4b7224817da",
+    "password": "60d9bd96",
+    "database": "heroku_60fd5de9a81a0b1?reconnect=true",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   },
   "test": {
