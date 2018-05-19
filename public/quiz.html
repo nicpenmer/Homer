@@ -47,7 +47,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="https://static1.squarespace.com/static/539f7bcfe4b0c1bc4482f192/t/550255ede4b0f0635463d34e/1424154168934/web_Alternative-img-%28high-res%29.jpg?format=1500w" alt="losAngeles"></div>
+    <div class="parallax"><img src="assets/images/la.jpg" alt="losAngeles"></div>
   </div>
  
 
@@ -77,35 +77,148 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="https://wallpapercave.com/wp/Vx6Ohz5.jpg" alt="Countryside"></div>
+    <div class="parallax"><img src="assets/images/country.jpg" alt="Countryside"></div>
   </div>
   
 
 
-  <!-- Modal Structure -->
-  <div id="quizSubmit" class="modal">
+<!-- Modal Structure -->
+<div id="quizSubmit" class="modal">
     <div class="modal-content">
-      <h4>QUIZ</h4>
-      <div id="quizQuestions">
-        <ul>
-          <li id="q1">What kind life do you want: City or Suburbs?</li>
-          <li id="q2">Who do you live with: Are you Single or do you have a family?</li>
-          <li id="q3">Salary: How much do you make?</li>
-          <li id="q4">Industry: What do you do?</li>
-          <li id="q5">Do Schools Matter: Yes or No? </li>
-          <li id="q6">Is Snow a dealbreaker?</li>
-          <li id="q7">Night owl or Morning dove?</li>
-          <li id="q8">How much do you want to pay in Rent?</li>
-          <li id="q9">Is Traffic a dealbreaker?</li>
-          <li id="q10">Crimerates: Are you a Safety Sally or a Daredevil Denise?</li>
-        </ul>
-      </div>
+        <h4>QUIZ</h4>
+        <div id="quizQuestions">
+            <form action="#">
+                <p id="q1"> City or Suburbs? </p>
+                <p>
+                    <label>
+                        <input input class="with-gap" name="group1" type="radio" value="city" checked />
+                        <span>City</span>
+                    </label>
+                    <label>
+                        <input name="group1" value="subrurbs" type="radio" />
+                        <span>Suburbs</span>
+                    </label>
+                </p>
+            </form>
+            <form>
+                <p id="q2"> Who do you live with: Are you Single or do you have a family? </p>
+                <p>
+                    <label>
+                        <input input class="with-gap" name="group1" type="radio" value="single" checked />
+                        <span>Single</span>
+                    </label>
+                    <label>
+                        <input name="group1" value="family" type="radio" />
+                        <span>Family</span>
+                    </label>
+                </p>
+            </form>
+            <form>
+                <p id="q3"> Salary? </p>
+                <p>
+                    <label>
+                        <input input class="with-gap" value="under100" name="group1" type="radio" checked />
+                        <span>
+                            < 100K / Year</span>
+                    </label>
+                    <label>
+                        <input name="group1" value="over100" type="radio" />
+                        <span> > 100K / Year</span>
+                    </label>
+                </p>
+            </form>
+            <form>
+                <p id="q4"> What kind of Industry? </p>
+                <p>
+                    <label>
+                        <input input class="with-gap" value="hightech" id="q3" name="group1" type="radio" checked />
+                        <span> High tech </span>
+                    </label>
+                    <label>
+                        <input name="group1" value="lowtech" type="radio" />
+                        <span> Low tech </span>
+                    </label>
+                </p>
+            </form>
+            <form>
+                <p id="q5"> Do Schools Matter: Yes or No? </p>
+                <label>
+                    <input input class="with-gap" value="proschool" id="q3" name="group1" type="radio" checked />
+                    <span> Yes </span>
+                </label>
+                <label>
+                    <input name="group1" value="noschool" type="radio" />
+                    <span> No </span>
+                </label>
+                </p>
+            </form>
+            <form>
+                <p id="q6"> Is snow a dealbreaker? </p>
+                <label>
+                    <input input class="with-gap" value="prosnow" id="q3" name="group1" type="radio" checked />
+                    <span> Yes </span>
+                </label>
+                <label>
+                    <input name="group1" value="nosnow" type="radio" />
+                    <span> No </span>
+                </label>
+                </p>
+            </form>
+            <form>
+                <p id="q7"> Night owl or Morning dove? </p>
+                <label>
+                    <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+                    <span> Night Owl </span>
+                </label>
+                <label>
+                    <input name="group1" value="day" type="radio" />
+                    <span> Morning Dove </span>
+                </label>
+                </p>
+            </form>
+            <form>
+                <p id="q8"> How much do you want to pay in Rent? </p>
+                <label>
+                    <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+                    <span> > 1200 / Month </span>
+                </label>
+                <label>
+                    <input name="group1" value="day" type="radio" />
+                    <span>
+                        < 1200 / Month </span>
+                </label>
+                </p>
+            </form>
+            <form>
+                <p id="q9"> How much does Traffic Matter? </p>
+                <label>
+                    <input input class="with-gap" value="does" id="q3" name="group1" type="radio" checked />
+                    <span> It matters a lot. </span>
+                </label>
+                <label>
+                    <input name="group1" value="doesnt" type="radio" />
+                    <span> Doesn't effect me. </span>
+                </label>
+                </p>
+            </form>
+            <form>
+                <p id="q10"> Crimerates: Are you a Safety Sally or a Daredevil Denise? </p>
+                <label>
+                    <input input class="with-gap" value="safety" id="q3" name="group1" type="radio" checked />
+                    <span> Safety Susan </span>
+                </label>
+                <label>
+                    <input name="group1" value="daredevil" type="radio" />
+                    <span> Daredevil Denise </span>
+                </label>
+                </p>
+            </form>
+        </div>
     </div>
     <div class="modal-footer">
-        <a href="results.html" id="submitQuiz" class="btn modal-trigger btn-large waves-effect waves-light grey darken-2">Submit</a>
-
+       <button href="results.html" id="submitQuiz" class="btn modal-trigger btn-large waves-effect waves-light grey darken-2" > Submit</button>
     </div>
-  </div>
+</div>
 
 
 
