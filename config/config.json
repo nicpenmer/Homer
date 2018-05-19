@@ -2,9 +2,18 @@
   "development": {
     "username": "b0a4b7224817da",
     "password": "60d9bd96",
-    "database": "heroku_60fd5de9a81a0b1?reconnect=true",
+    "database": "heroku_60fd5de9a81a0b1",
     "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
+  },
+  "local-development": {
+    "username": "root",
+    "password": "Cardinal1",
+    "database": "homer",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorageTableName": "sequelize_meta",
+    "seederStorageTableName": "sequelize_data"
   },
   "test": {
     "username": "root",
@@ -21,3 +30,5 @@
     "dialect": "mysql"
   }
 }
+
+
