@@ -1,6 +1,7 @@
 //***********Quiz Functionality****************
 $(document).ready(function() {
 
+	$('.modal').modal();
 	//on click
 	$("submitQuiz").on("click", function() {
 
