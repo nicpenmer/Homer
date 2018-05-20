@@ -22,18 +22,28 @@
       <a id="logo-container" href="#" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
         <li>
-          <a href="#">Navigate</a>
+          <a class='dropdown-trigger btn grey darken-1' href="#" data-target='dropdown1'>Menu</a>
         </li>
       </ul>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <a href="#"></a>
+        <a href="login.html">Login</a>
+        <a href="user.html">User Page</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="results.html">Results</a>
+        <a href="city.html">City</a>
+      </ul>
+      <!--sidenav pop out structure_-->
 
       <ul id="nav-mobile" class="sidenav">
         <li>
-            <a href="#"></a>
-            <a href="login.html">Login</a>
-            <a href="user.html">User Page</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="results.html">Results</a>
-            <a href="city.html">City</a>
+          <a href="#"></a>
+          <a href="login.html">Login</a>
+          <a href="user.html">User Page</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="results.html">Results</a>
+          <a href="city.html">City</a>
         </li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger">
@@ -104,8 +114,9 @@
   <!-- Modal Structure -->
   <div id="createNew" class="modal">
     <div class="modal-content">
-      <h4>Create New User Profile</h4>
-      <<form>
+      <h5>Create New User Profile</h5>
+      <br>
+      <form>
         First name:
         <br>
         <input type="text" name="firstname" id="newFirst">
@@ -117,7 +128,7 @@
         <br> Password:
         <br>
         <input type="text" name="password" id="newPass">
-        </form>
+      </form>
     </div>
     <div class="modal-footer">
       <a href="quiz.html" id="submitNewProfile" class="modal-close waves-effect waves-grey btn-flat">Done</a>
@@ -127,7 +138,8 @@
   <!-- Modal Structure -->
   <div id="Login" class="modal">
     <div class="modal-content">
-      <h4>Welcome back, please Log In</h4>
+      <h5>Welcome back, please Log In</h5>
+      <br>
       <form>
         User name:
         <br>
@@ -156,13 +168,13 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="assets/js/materialize.js"></script>
   <script src="assets/js/init.js"></script>
-<<<<<<< HEAD
-=======
-  <script src="assets/js/login.js"></script>
->>>>>>> 97074f7752f5a27aad268b7997c9a9a56c4e5a44
+  <script src="assets/js/login.js">
+  </script>
+
   <!-- Compiled and minified JavaScript -->
-<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
- -->  <script src="assets/js/login.js"></script>
+  <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+ -->
+  <script src="assets/js/login.js"></script>
 
 </body>
 

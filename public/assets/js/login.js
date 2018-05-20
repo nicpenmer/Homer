@@ -5,7 +5,8 @@ $(document).ready(function() {
 
     //buton to display new profile and login form (done through materialize)
     $('.modal').modal();
-
+	//button to handle dropdown menu
+	$(".dropdown-trigger").dropdown();
     //button for creating new profile
     $("#submitNewProfile").on("click", function(event) {
         event.preventDefault();

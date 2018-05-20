@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HOMER | QUIZ</title>
 
   <!-- CSS  -->
@@ -13,43 +13,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 </head>
+
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navigate</a></li>
+        <li>
+          <a class='dropdown-trigger btn grey darken-1' href="#" data-target='dropdown1'>Menu</a>
+        </li>
       </ul>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <a href="#"></a>
+        <a href="login.html">Login</a>
+        <a href="user.html">User Page</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="results.html">Results</a>
+        <a href="city.html">City</a>
+      </ul>
+      <!--sidenav pop out structure_-->
 
       <ul id="nav-mobile" class="sidenav">
-        <li>                    
+        <li>
           <a href="#"></a>
           <a href="login.html">Login</a>
           <a href="user.html">User Page</a>
           <a href="quiz.html">Quiz</a>
           <a href="results.html">Results</a>
-          <a href="city.html">City</a></li>
+          <a href="city.html">City</a>
+        </li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
     </div>
   </nav>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br>
+        <br>
         <h1 class="header center white-text text-lighten-2">HOMER</h1>
         <div class="row center">
           <h5 class="header col s12 light">Find where you belong.</h5>
         </div>
-      
-        <br><br>
-
+        <br>
+        <br>
       </div>
     </div>
-    <div class="parallax"><img src="assets/images/la.jpg" alt="losAngeles"></div>
+    <div class="parallax">
+      <img src="assets/images/la.jpg" alt="losAngeles">
+    </div>
   </div>
- 
+
 
   <div class="container">
     <div class="section">
@@ -58,11 +76,11 @@
       <div class="row">
         <div class="col s12 m12">
           <br>
-            <div class="row center">
-                <div class="Quiz">
-                        <a href="" id="createbutton" class="btn modal-trigger btn-large waves-effect waves-light grey darken-2" data-target="quizSubmit">QUIZ</a>
-                </div>
+          <div class="row center">
+            <div class="Quiz">
+              <a href="" id="createbutton" class="btn modal-trigger btn-large waves-effect waves-light grey darken-2" data-target="quizSubmit">QUIZ</a>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -77,149 +95,151 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="assets/images/country.jpg" alt="Countryside"></div>
+    <div class="parallax">
+      <img src="assets/images/country.jpg" alt="Countryside">
+    </div>
   </div>
-  
 
 
-<!-- Modal Structure -->
-<div id="quizSubmit" class="modal">
+
+  <!-- Modal Structure -->
+  <div id="quizSubmit" class="modal">
     <div class="modal-content">
-        <h4>QUIZ</h4>
-        <div id="quizQuestions">
-            <form action="#">
-                <p id="q1"> City or Suburbs? </p>
-                <p>
-                    <label>
-                        <input input class="with-gap" name="group1" type="radio" value="city" checked />
-                        <span>City</span>
-                    </label>
-                    <label>
-                        <input input class="with-gap" name="group1" value="subrurbs" type="radio" />
-                        <span>Suburbs</span>
-                    </label>
-                </p>
-            </form>
-            <form>
-                <p id="q2"> Who do you live with: Are you Single or do you have a family? </p>
-                <p>
-                    <label>
-                        <input input class="with-gap" name="group1" type="radio" value="single" checked />
-                        <span>Single</span>
-                    </label>
-                    <label>
-                        <input input class="with-gap" name="group1" value="family" type="radio" />
-                        <span>Family</span>
-                    </label>
-                </p>
-            </form>
-            <form>
-                <p id="q3"> Salary? </p>
-                <p>
-                    <label>
-                        <input input class="with-gap" value="under100" name="group1" type="radio" checked />
-                        <span>
-                            < 100K / Year</span>
-                    </label>
-                    <label>
-                        <input input class="with-gap" name="group1" value="over100" type="radio" />
-                        <span> > 100K / Year</span>
-                    </label>
-                </p>
-            </form>
-            <form>
-                <p id="q4"> What kind of Industry? </p>
-                <p>
-                    <label>
-                        <input input class="with-gap" value="hightech" id="q3" name="group1" type="radio" checked />
-                        <span> High tech </span>
-                    </label>
-                    <label>
-                        <input input class="with-gap" name="group1" value="lowtech" type="radio" />
-                        <span> Low tech </span>
-                    </label>
-                </p>
-            </form>
-            <form>
-                <p id="q5"> Do Schools Matter: Yes or No? </p>
-                <label>
-                    <input input class="with-gap" value="proschool" id="q3" name="group1" type="radio" checked />
-                    <span> Yes </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="noschool" type="radio" />
-                    <span> No </span>
-                </label>
-                </p>
-            </form>
-            <form>
-                <p id="q6"> Is snow a dealbreaker? </p>
-                <label>
-                    <input input class="with-gap" value="prosnow" id="q3" name="group1" type="radio" checked />
-                    <span> Yes </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="nosnow" type="radio" />
-                    <span> No </span>
-                </label>
-                </p>
-            </form>
-            <form>
-                <p id="q7"> Night owl or Morning dove? </p>
-                <label>
-                    <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
-                    <span> Night Owl </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="day" type="radio" />
-                    <span> Morning Dove </span>
-                </label>
-                </p>
-            </form>
-            <form>
-                <p id="q8"> How much do you want to pay in Rent? </p>
-                <label>
-                    <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
-                    <span> > 1200 / Month </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="day" type="radio" />
-                    <span>
-                        < 1200 / Month </span>
-                </label>
-                </p>
-            </form>
-            <form>
-                <p id="q9"> How much does Traffic Matter? </p>
-                <label>
-                    <input input class="with-gap" value="does" id="q3" name="group1" type="radio" checked />
-                    <span> It matters a lot. </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="doesnt" type="radio" />
-                    <span> Doesn't effect me. </span>
-                </label>
-                </p>
-            </form>
-            <form>
-                <p id="q10"> Crimerates: Are you a Safety Sally or a Daredevil Denise? </p>
-                <label>
-                    <input input class="with-gap" value="safety" id="q3" name="group1" type="radio" checked />
-                    <span> Safety Susan </span>
-                </label>
-                <label>
-                    <input input class="with-gap" name="group1" value="daredevil" type="radio" />
-                    <span> Daredevil Denise </span>
-                </label>
-                </p>
-            </form>
-        </div>
+      <h4>QUIZ</h4>
+      <div id="quizQuestions">
+        <form action="#">
+          <p id="q1"> City or Suburbs? </p>
+          <p>
+            <label>
+              <input input class="with-gap" name="group1" type="radio" value="city" checked />
+              <span>City</span>
+            </label>
+            <label>
+              <input input class="with-gap" name="group1" value="subrurbs" type="radio" />
+              <span>Suburbs</span>
+            </label>
+          </p>
+        </form>
+        <form>
+          <p id="q2"> Who do you live with: Are you Single or do you have a family? </p>
+          <p>
+            <label>
+              <input input class="with-gap" name="group1" type="radio" value="single" checked />
+              <span>Single</span>
+            </label>
+            <label>
+              <input input class="with-gap" name="group1" value="family" type="radio" />
+              <span>Family</span>
+            </label>
+          </p>
+        </form>
+        <form>
+          <p id="q3"> Salary? </p>
+          <p>
+            <label>
+              <input input class="with-gap" value="under100" name="group1" type="radio" checked />
+              <span>
+                < 100K / Year</span>
+            </label>
+            <label>
+              <input input class="with-gap" name="group1" value="over100" type="radio" />
+              <span> > 100K / Year</span>
+            </label>
+          </p>
+        </form>
+        <form>
+          <p id="q4"> What kind of Industry? </p>
+          <p>
+            <label>
+              <input input class="with-gap" value="hightech" id="q3" name="group1" type="radio" checked />
+              <span> High tech </span>
+            </label>
+            <label>
+              <input input class="with-gap" name="group1" value="lowtech" type="radio" />
+              <span> Low tech </span>
+            </label>
+          </p>
+        </form>
+        <form>
+          <p id="q5"> Do Schools Matter: Yes or No? </p>
+          <label>
+            <input input class="with-gap" value="proschool" id="q3" name="group1" type="radio" checked />
+            <span> Yes </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="noschool" type="radio" />
+            <span> No </span>
+          </label>
+          </p>
+        </form>
+        <form>
+          <p id="q6"> Is snow a dealbreaker? </p>
+          <label>
+            <input input class="with-gap" value="prosnow" id="q3" name="group1" type="radio" checked />
+            <span> Yes </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="nosnow" type="radio" />
+            <span> No </span>
+          </label>
+          </p>
+        </form>
+        <form>
+          <p id="q7"> Night owl or Morning dove? </p>
+          <label>
+            <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+            <span> Night Owl </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="day" type="radio" />
+            <span> Morning Dove </span>
+          </label>
+          </p>
+        </form>
+        <form>
+          <p id="q8"> How much do you want to pay in Rent? </p>
+          <label>
+            <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+            <span> > 1200 / Month </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="day" type="radio" />
+            <span>
+              < 1200 / Month </span>
+          </label>
+          </p>
+        </form>
+        <form>
+          <p id="q9"> How much does Traffic Matter? </p>
+          <label>
+            <input input class="with-gap" value="does" id="q3" name="group1" type="radio" checked />
+            <span> It matters a lot. </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="doesnt" type="radio" />
+            <span> Doesn't effect me. </span>
+          </label>
+          </p>
+        </form>
+        <form>
+          <p id="q10"> Crimerates: Are you a Safety Sally or a Daredevil Denise? </p>
+          <label>
+            <input input class="with-gap" value="safety" id="q3" name="group1" type="radio" checked />
+            <span> Safety Susan </span>
+          </label>
+          <label>
+            <input input class="with-gap" name="group1" value="daredevil" type="radio" />
+            <span> Daredevil Denise </span>
+          </label>
+          </p>
+        </form>
+      </div>
     </div>
     <div class="modal-footer">
-        <a href="#" id="submitQuiz" class="btn-large waves-effect waves-light grey darken-2">Submit</a>
+      <a href="#" id="submitQuiz" class="btn-large waves-effect waves-light grey darken-2">Submit</a>
 
     </div>
-</div>
+  </div>
 
 
 
@@ -239,5 +259,6 @@
   <script src="assets/js/init.js"></script>
   <script src="assets/js/login.js"></script>
   <script src="assets/js/quiz.js"></script>
-  </body>
+</body>
+
 </html>
