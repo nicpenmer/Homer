@@ -15,41 +15,41 @@
 </head>
 
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"></a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <a class='dropdown-trigger btn grey darken-1' href="#" data-target='dropdown1'>Menu</a>
-        </li>
-      </ul>
-      <!-- Dropdown Structure -->
-      <ul id="dropdown1" class="dropdown-content">
-        <a href="#"></a>
-        <a href="login.html">Login</a>
-        <a href="user.html">User Page</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="results.html">Results</a>
-        <a href="city.html">City</a>
-      </ul>
-      <!--sidenav pop out structure_-->
-
-      <ul id="nav-mobile" class="sidenav">
-        <li>
-          <a href="#"></a>
-          <a href="login.html">Login</a>
-          <a href="user.html">User Page</a>
-          <a href="quiz.html">Quiz</a>
-          <a href="results.html">Results</a>
-          <a href="city.html">City</a>
-        </li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons">menu</i>
-      </a>
-    </div>
-  </nav>
-
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo"></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class='dropdown-trigger btn grey darken-1' href="#" data-target='dropdown1'>Menu</a>
+            </li>
+          </ul>
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <a href="#"></a>
+            <a href="login.html">Login</a>
+            <a href="user.html">User</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="results.html">Results</a>
+            <a href="city.html">City</a>
+          </ul>
+          <!--sidenav pop out structure_-->
+    
+          <ul id="nav-mobile" class="sidenav">
+            <li>
+              <a href="#"></a>
+              <a href="login.html">Login</a>
+              <a href="user.html">User</a>
+              <a href="quiz.html">Quiz</a>
+              <a href="results.html">Results</a>
+              <a href="city.html">City</a>
+            </li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+        </div>
+      </nav>
+    
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -108,28 +108,28 @@
       <h4>QUIZ</h4>
       <div id="quizQuestions">
         <form action="#">
-          <p id="q1"> City or Suburbs? </p>
+          <p id="q1"> Are you a fan of neighbors? </p>
           <p>
             <label>
-              <input input class="with-gap" name="group1" type="radio" value="city" checked />
-              <span>City</span>
+              <input input class="with-gap" name="group1" type="radio" value="morepop" checked />
+              <span>Yes, the more the merrier!</span>
             </label>
             <label>
-              <input input class="with-gap" name="group1" value="subrurbs" type="radio" />
-              <span>Suburbs</span>
+              <input input class="with-gap" name="group1" value="lesspop" type="radio" />
+              <span>No, I hate other people.</span>
             </label>
           </p>
         </form>
         <form>
-          <p id="q2"> Who do you live with: Are you Single or do you have a family? </p>
+          <p id="q2"> Is urban growth important? </p>
           <p>
             <label>
-              <input input class="with-gap" name="group1" type="radio" value="single" checked />
-              <span>Single</span>
+              <input input class="with-gap" name="group1" type="radio" value="change" checked />
+              <span>Yes, I like progress, growth and change</span>
             </label>
             <label>
-              <input input class="with-gap" name="group1" value="family" type="radio" />
-              <span>Family</span>
+              <input input class="with-gap" name="group1" value="nochange" type="radio" />
+              <span>No, I hate change.</span>
             </label>
           </p>
         </form>
@@ -137,13 +137,12 @@
           <p id="q3"> Salary? </p>
           <p>
             <label>
-              <input input class="with-gap" value="under100" name="group1" type="radio" checked />
-              <span>
-                < 100K / Year</span>
+              <input input class="with-gap" value="morepop" name="group1" type="radio" checked />
+              <span> < 100K / Year </span>
             </label>
             <label>
-              <input input class="with-gap" name="group1" value="over100" type="radio" />
-              <span> > 100K / Year</span>
+              <input input class="with-gap" name="group1" value="lesspop" type="radio" />
+              <span> > 100K / Year </span>
             </label>
           </p>
         </form>
@@ -151,35 +150,35 @@
           <p id="q4"> What kind of Industry? </p>
           <p>
             <label>
-              <input input class="with-gap" value="hightech" id="q3" name="group1" type="radio" checked />
+              <input input class="with-gap" value="change" id="q3" name="group1" type="radio" checked />
               <span> High tech </span>
             </label>
             <label>
-              <input input class="with-gap" name="group1" value="lowtech" type="radio" />
+              <input input class="with-gap" name="group1" value="nochange" type="radio" />
               <span> Low tech </span>
             </label>
           </p>
         </form>
         <form>
-          <p id="q5"> Do Schools Matter: Yes or No? </p>
+          <p id="q5"> Is being somewhere "hip" matter? </p>
           <label>
-            <input input class="with-gap" value="proschool" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="highrank" id="q3" name="group1" type="radio" checked />
             <span> Yes </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="noschool" type="radio" />
+            <input input class="with-gap" name="group1" value="lowrank" type="radio" />
             <span> No </span>
           </label>
           </p>
         </form>
         <form>
-          <p id="q6"> Is snow a dealbreaker? </p>
+          <p id="q6"> Is Cultural Diversity Important? </p>
           <label>
-            <input input class="with-gap" value="prosnow" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="change" id="q3" name="group1" type="radio" checked />
             <span> Yes </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="nosnow" type="radio" />
+            <input input class="with-gap" name="group1" value="nochange" type="radio" />
             <span> No </span>
           </label>
           </p>
@@ -187,11 +186,11 @@
         <form>
           <p id="q7"> Night owl or Morning dove? </p>
           <label>
-            <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="change" id="q3" name="group1" type="radio" checked />
             <span> Night Owl </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="day" type="radio" />
+            <input input class="with-gap" name="group1" value="nochange" type="radio" />
             <span> Morning Dove </span>
           </label>
           </p>
@@ -199,24 +198,23 @@
         <form>
           <p id="q8"> How much do you want to pay in Rent? </p>
           <label>
-            <input input class="with-gap" value="night" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="morepop" id="q3" name="group1" type="radio" checked />
             <span> > 1200 / Month </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="day" type="radio" />
-            <span>
-              < 1200 / Month </span>
+            <input input class="with-gap" name="group1" value="lesspop" type="radio" />
+            <span>< 1200 / Month </span>
           </label>
           </p>
         </form>
         <form>
           <p id="q9"> How much does Traffic Matter? </p>
           <label>
-            <input input class="with-gap" value="does" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="change" id="q3" name="group1" type="radio" checked />
             <span> It matters a lot. </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="doesnt" type="radio" />
+            <input input class="with-gap" name="group1" value="nochange" type="radio" />
             <span> Doesn't effect me. </span>
           </label>
           </p>
@@ -224,11 +222,11 @@
         <form>
           <p id="q10"> Crimerates: Are you a Safety Sally or a Daredevil Denise? </p>
           <label>
-            <input input class="with-gap" value="safety" id="q3" name="group1" type="radio" checked />
+            <input input class="with-gap" value="morepop" id="q3" name="group1" type="radio" checked />
             <span> Safety Susan </span>
           </label>
           <label>
-            <input input class="with-gap" name="group1" value="daredevil" type="radio" />
+            <input input class="with-gap" name="group1" value="lesspop" type="radio" />
             <span> Daredevil Denise </span>
           </label>
           </p>

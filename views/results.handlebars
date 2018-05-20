@@ -3,19 +3,29 @@
         <div class="row">
             <div class="col s12 m12">
                 <br>
-                <div class="row center">
-                    <div class="results">
-                        <div class="resultsDisplay">
-                            <h4>Here are your top 20 results</h4>
-                            <ol id="resultList">
-                                    {{#each results}} 
-                                    {{results }} 
-                                    {{/each}}
-                            </ol>
-                        </div>
+                <div class="card white">
+                    <div class="card-content  row center">
+                        <span class="card-title">Results</span>
+                        <ol class="results" id="resultList">
+                            {{#each results}} 
+                            {{results }} 
+                            {{/each}}
+                        </ol>
+                    </div>
+                    <div class="card-action">
+                        <a href="#"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+<script id="results-template" type="text/handlebars-template">
+
+</script>
