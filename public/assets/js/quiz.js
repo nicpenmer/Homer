@@ -18,7 +18,7 @@ $(document).ready(function() {
 			q10: $("#q10").val().trim()
 		};
 
-		console.log("HIIII");
+		console.log(quizResults);
 
 		// var for how many questions there are and home many answers the user filled out
 		$.ajax("/api/quiz", {

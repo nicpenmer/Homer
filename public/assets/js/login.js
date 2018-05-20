@@ -17,6 +17,15 @@ $(document).ready(function() {
         var newUser = $("#newUser").val().trim();
         var newPass = $("#newPass").val().trim();
 
+        var newProfile = {
+            first: newFirst,
+            last: newLast,
+            user: newUser,
+            password: newPass
+            };
+
+        console.log(newProfile);
+
         //need to check/read through the database to makesure the USER NAME is not taken
         $.ajax("/api/create" + newUser, {
             type: "GET",
@@ -24,12 +33,6 @@ $(document).ready(function() {
                 if (response === true) {
                     console.log("choose a new user name")
                 } else {
-                    var newProfile = {
-                        first: newFirst,
-                        last: newLast,
-                        user: newUser,
-                        password: newPass
-                    };
 
                     console.log(newProfile);
                     //send POST request.
@@ -59,6 +62,7 @@ $(document).ready(function() {
             password: password
         };
 
+        console.log(login);
         //need to loop thorugh the database to makesure the USER NAME is not taken
         $ajax("/api/login" + login, {
             type: "GET",
