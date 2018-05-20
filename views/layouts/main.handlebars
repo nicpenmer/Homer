@@ -15,30 +15,40 @@
 </head>
 
 <body>
-    <nav class="white" role="navigation">
+  <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo"></a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="#">Navigate</a>
-                </li>
-            </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <li>
-                    <a href="#"></a>
-                    <a href="login.html">Login</a>
-                    <a href="user.html">User Page</a>
-                    <a href="quiz.html">Quiz</a>
-                    <a href="results.html">Results</a>
-                    <a href="city.html">City</a>
-                </li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
+          <a id="logo-container" href="#" class="brand-logo"></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class='dropdown-trigger btn grey darken-1' href="#" data-target='dropdown1'>Menu</a>
+            </li>
+          </ul>
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <a href="#"></a>
+            <a href="login.html">Login</a>
+            <a href="user.html">User Page</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="results.html">Results</a>
+            <a href="city.html">City</a>
+          </ul>
+          <!--sidenav pop out structure_-->
+    
+          <ul id="nav-mobile" class="sidenav">
+            <li>
+              <a href="#"></a>
+              <a href="login.html">Login</a>
+              <a href="user.html">User Page</a>
+              <a href="quiz.html">Quiz</a>
+              <a href="results.html">Results</a>
+              <a href="city.html">City</a>
+            </li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
         </div>
-    </nav>
+      </nav>
 
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
