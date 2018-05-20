@@ -21,7 +21,7 @@ $(document).ready(function() {
 		console.log("HIIII");
 
 		// var for how many questions there are and home many answers the user filled out
-		ajax("/api/quiz", {
+		$.ajax("/api/quiz", {
 			type: "POST",
 			data: quizResults
 		});
