@@ -5,7 +5,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 // Requiring our models for syncing
-var db = require("./models/index");
+var db = require("./models");
 // var userTable = require("./db/seeds");
 
 // Sets up the Express App
@@ -32,13 +32,13 @@ app.set("view engine", "handlebars");
 // Routes
 // ============s=================================================
 require("./controllers/homerController")(app);
-require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
 // userTable.up(db.sequelize, db.Sequelize);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
