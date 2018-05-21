@@ -39,6 +39,16 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/cities/:name", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.cities.findAll({where: {
+        City: req.params.name
+    }}).then(function(dbcities) {
+      // We have access to the cities as an argument inside of the callback function
+      res.json(dbcities);
+    });
+  });
+
   // POST route for saving a new todo
   app.post("/api/users", function(req, res) {
     console.log(req.body);
