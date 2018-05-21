@@ -1,3 +1,5 @@
+var sequelizeRouter = require('sequelize-router');
+
 module.exports = function (sequelize, DataTypes) {
     const cities = sequelize.define('cities', {
         City: DataTypes.STRING,

@@ -6,6 +6,9 @@ var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require("../config/config.json")[env];
+var exports = module.exports
+var db = new Sequelize('mysql://b0a4b7224817da:60d9bd96@us-cdbr-iron-east-04.cleardb.net/heroku_60fd5de9a81a0b1');
+var sequelizeRouter = require('sequelize-router');
 var db = {};
 
 if (config.use_env_variable) {
@@ -34,3 +37,4 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+

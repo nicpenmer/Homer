@@ -9,6 +9,7 @@
 //    });
 //    return cities;
 //};
+var sequelizeRouter = require('sequelize-router');
 
 module.exports= function(sequelize,DataTypes){
 const users = sequelize.define('users', {
