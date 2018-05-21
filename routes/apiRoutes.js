@@ -56,10 +56,10 @@ module.exports = function(app) {
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
     db.users.create({
-    first_name:req.body.text,        
-    last_name:req.body.text,
-    user_name:req.body.text,   
-    password:req.body.text,
+    first_name:req.body.newFirst,        
+    last_name:req.body.newLast,
+    user_name:req.body.newUser,   
+    password:req.body.newPass,
     }).then(function(dbusers) {
       // We have access to the new user as an argument inside of the callback function
       res.json(dbusers);
@@ -68,12 +68,12 @@ module.exports = function(app) {
 
   // DELETE route for deleting todos. We can get the id of the todo to be deleted from
   // req.params.id
-  app.delete("/api/todos/:id", function(req, res) {
-
-  });
-
-  // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("/api/todos", function(req, res) {
-
-  });
+//  app.delete("/api/todos/:id", function(req, res) {
+//
+//  });
+//
+//  // PUT route for updating todos. We can get the updated todo data from req.body
+//  app.put("/api/todos", function(req, res) {
+//
+//  });
 };
