@@ -32,6 +32,7 @@ app.set("view engine", "handlebars");
 // Routes
 // ============s=================================================
 require("./controllers/homerController")(app);
+require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 
 // userTable.up(db.sequelize, db.Sequelize);

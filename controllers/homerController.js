@@ -42,17 +42,17 @@ module.exports = function(app) {
 // };
 
 // Get route for retrieving posts for a returning user
-app.get("/api/login/:id", function(req, res) {
-  db.Post.findAll({
-    where: {
-      userName: req.body.userName,
-      password: req.body.password
-    }
-  })
-    .then(function(dbPostt) {
-      res.json(dbPost);
-    });
-});
+//app.get("/api/login/:id", function(req, res) {
+//  db.Post.findAll({
+//    where: {
+//      userName: req.body.userName,
+//      password: req.body.password
+//    }
+//  })
+//    .then(function(dbPostt) {
+//      res.json(dbPost);
+//    });
+//});
 
   // // Get route for returning posts of a specific category
   // app.get("/api/posts/category/:category", function(req, res) {
