@@ -18,9 +18,9 @@ $(document).ready(function() {
         var newPass = $("#newPass").val().trim();
 
         var newProfile = {
-            first: newFirst,
-            last: newLast,
-            user: newUser,
+            first_name: newFirst,
+            last_name: newLast,
+            user_name: newUser,
             password: newPass
             };
 
