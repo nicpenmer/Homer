@@ -1,7 +1,7 @@
 var db = require("../models/index");
 var wModels =("..config/wModels");
 
-module.exports =makeUser;
+// module.exports =makeUser;
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -15,7 +15,7 @@ module.exports = function(app) {
   });
 
   // POST route for creating and saving new user
-  wModels.makeUser() 
+  // wModels.makeUser() 
   app.post("/api/create", function(req, res) {
     console.log(req.body);
 
