@@ -51,21 +51,21 @@ module.exports = function(app) {
 
   // POST route for saving a new todo
   app.post("/api/users", function(req, res) {
-    
+    console.log(req.body);
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
     db.users.create({
-    first_name: "hank"  ,                              
-    last_name:   "chinaski" ,                     
-    user_name:   "hCinaski" ,                       
-    password:     "crunge"  ,                  
+    first_name:req.body.text,        
+    last_name:req.body.text,
+    user_name:req.body.text,   
+    password:req.body.text,
     }).then(function(dbusers) {
       // We have access to the new user as an argument inside of the callback function
       res.json(dbusers);
     });
   });
- //req.body.text, req.body.text, req.body.text,req.body.text,
+
   // DELETE route for deleting todos. We can get the id of the todo to be deleted from
   // req.params.id
   app.delete("/api/todos/:id", function(req, res) {

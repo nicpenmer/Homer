@@ -27,7 +27,7 @@ $(document).ready(function() {
         console.log(newProfile);
 
         //need to check/read through the database to makesure the USER NAME is not taken
-        $.ajax("/api/create" + newUser, {
+        $.ajax("/api/cre" + newUser, {
             type: "GET",
         }).then(function(response) {
                 if (response === true) {

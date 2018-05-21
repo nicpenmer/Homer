@@ -16,17 +16,16 @@ const makeQuiz = require("../config/wModels").makeQuiz;
 // =============================================================
 
 // GET route for getting all of registered users
-module.exports = function(app) { 
-  
-app.get("/api/posts", function(req, res) {
-  db.Post.findAll({})
-    .then(function(dbPost) {
-    // We have access to the todos as an argument inside of the callback function
-      res.json(dbPost);
-  });
-});
+//module.exports = function(app) { 
+//  
+//app.get("/api/posts", function(req, res) {
+//  db.Post.findAll({})
+//    .then(function(dbPost) {
+//    // We have access to the todos as an argument inside of the callback function
+//      res.json(dbPost);
+//  });
+//});
 
-<<<<<<< HEAD
 // var makeUser = function (first, last, use, pass) {
 //   users.create({
 //       first_name: first,
@@ -50,48 +49,39 @@ app.get("/api/posts", function(req, res) {
 //      res.json(dbPost);
 //    });
 //});
-=======
-app.get("/api/posts/", function(req, res) {
-  db.Wmodels.findAll({
-    where: users,
-  }).then(function(dbPost) {
-    res.json(dbPost);
-  });
-});
->>>>>>> 3225de9da852b9c4e57dbb61833e1f282ea5218b
 
 // POST route for creating and saving new user
 
-app.post("/api/posts/", function(req, res) {
-  console.log(req.body);
-  db.Post.create({
-    text: req.body.text,
-    complete: req.body.complete
-  }, {
-    where: makeUser,
+//app.post("/api/posts/", function(req, res) {
+//  console.log(req.body);
+//  db.Post.create({
+//    text: req.body.text,
+//    complete: req.body.complete
+//  }, {
+//    where: makeUser,
       // first_name: req.body.first_name,
       // last_name: req.body.last_name,
       // userName: req.body.userName,
       // password: req.body.password
-  }).then(function(dbPost) {
-    res.json(dbPost);
-  });
-});
+//  }).then(function(dbPost) {
+ //   res.json(dbPost);
+//  });
+//});
 
 // PUT route for updating quiz results and then sending results to the database
-app.get("/api/posts/", function(req, res) {
-  console.log(req.body);
-  db.Post.update({
-    text: req.body.text,
-    complete: req.body.complete
-  }, {
-    where: quiz,
-  }).then(function(dbQuiz) {
-    res.json(dbQuiz);
-  });
-});
-
-};
+//app.get("/api/posts/", function(req, res) {
+//  console.log(req.body);
+//  db.Post.update({
+//    text: req.body.text,
+//    complete: req.body.complete
+//  }, {
+//    where: quiz,
+//  }).then(function(dbQuiz) {
+//    res.json(dbQuiz);
+//  });
+//});
+//
+//};
 
 // // Get route for retrieving posts for a returning user
 // app.get("/api/login/:id", function(req, res) {
