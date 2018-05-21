@@ -5,14 +5,14 @@
 // Dependencies
 // =============================================================
 
-// Requiring our Todo model
+// Requiring our models
 var db = require("../models");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the todos
+  // GET route for getting all of the users
   app.get("/api/users", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.users.findAll({}).then(function(dbusers) {
@@ -21,26 +21,38 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/users/:name", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.users.findAll({where: {
+        user_name: req.params.name
+    }}).then(function(dbusers) {
+      // We have access to the users as an argument inside of the callback function
+      res.json(dbusers);
+    });
+  });
+
   app.get("/api/cities", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.cities.findAll({}).then(function(dbcities) {
-      // We have access to the users as an argument inside of the callback function
+      // We have access to the cities as an argument inside of the callback function
       res.json(dbcities);
     });
   });
 
   // POST route for saving a new todo
-  app.post("/api/todos", function(req, res) {
+  app.post("/api/users", function(req, res) {
     console.log(req.body);
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Todo.create({
-      text: req.body.text,
-      complete: req.body.complete
-    }).then(function(dbTodo) {
-      // We have access to the new todo as an argument inside of the callback function
-      res.json(dbTodo);
+    db.users.create({
+    first_name: req.body.text,        
+    last_name: req.body.text,
+    user_name:req.body.text,   
+    password:req.body.text,
+    }).then(function(dbusers) {
+      // We have access to the new user as an argument inside of the callback function
+      res.json(dbusers);
     });
   });
 
