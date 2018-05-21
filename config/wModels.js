@@ -1,3 +1,8 @@
+var db = require("../models/index");
+var sequelizeRouter = require('sequelize-router');
+var Sequelize = require("sequelize");
+var db = new Sequelize('mysql://b0a4b7224817da:60d9bd96@us-cdbr-iron-east-04.cleardb.net/heroku_60fd5de9a81a0b1');
+
 const cities = db.define('1000_cities', {
     City: {
         type: Sequelize.STRING,
@@ -38,9 +43,7 @@ const users = db.define('users', {
     },
 
 
-
 });
-
 
 const quiz = db.define("quizAnswers", {
     Answer1: {
@@ -181,12 +184,6 @@ module.exports = findAllCities;
 module.exports= findCityName;
 module.exports= findUserObj;
 module.exports= findCityRank;
-
-
-
-
-
-
 
 
 // var Sequelize = require("sequelize");

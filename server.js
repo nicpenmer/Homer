@@ -3,9 +3,10 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var sequelizeRouter = require('sequelize-router');
 var path = require("path");
 // Requiring our models for syncing
-var db = require("./models");
+var db = require("./models/index");
 // var userTable = require("./db/seeds");
 
 // Sets up the Express App
@@ -21,8 +22,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
-
-
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
